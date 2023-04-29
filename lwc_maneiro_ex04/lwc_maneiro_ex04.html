@@ -1,17 +1,35 @@
 <template>
-    <lightning-card title="Criar um novo Lead">
-        <div class="slds-m-around_small">            
-        
-        <lightning-input label="Sobrenome" type="text" name="lastName" value={lastName} onchange={handleInputChange}></lightning-input>
-        <lightning-input label="Empresa" type="text" name="company" value={company} onchange={handleInputChange}></lightning-input>
-        <lightning-input label="Receita Anual" type="text" name="annualRevenue" value={annualRevenue} onchange={handleInputChange}></lightning-input>   
-        <lightning-input label="Classificação" type="text" name="rating" value={rating} onchange={handleInputChange}></lightning-input>          
-        <lightning-input label="Telefone" type="text" name="phone" value={phone} onchange={handleInputChange}></lightning-input>
-        <lightning-input label="Celular" type="text" name="mobilePhone" value={mobilePhone} onchange={handleInputChange}></lightning-input><br/>
-
-        <lightning-button variant="brand" label="Criar" title="Criar" onclick={handleSubmit} class="slds-m-left_x-small"></lightning-button>
-        <lightning-button label="Limpar" title="Limpar" onclick={handleClear} class="slds-m-left_x-small"></lightning-button>
-        
+    <div class="slds-box slds-theme_default">
+    <div>
+        <h1>Criar Lead</h1>
+        <div>
+            <label>Sobrenome</label>
+            <input type="text" name="lastName" required value={lastName} onchange={handleInputChange}/>
+        </div>
+        <div>
+            <label>Empresa</label>
+            <input type="text" name="company" required value={company} onchange={handleInputChange}/>
+        </div>
+        <div>
+            <label>Receita Anual</label>
+            <input type="number" name="annualRevenue" required value={annualRevenue} onchange={handleInputChange}/>
+        </div>
+        <div>
+            <label>Classificação</label>
+            <input type="text" name="rating" required value={rating} onchange={handleInputChange}/>
+        </div>
+        <div>
+            <label>Telefone</label>
+            <input type="tel" name="phone" required value={phone} onchange={handleInputChange}/>
+        </div>
+        <div>
+            <label>Celular</label>
+            <input type="tel" name="mobilePhone" required value={mobilePhone} onchange={handleInputChange}/>
+        </div>
+        <div>
+            <button onclick={handleSubmit}>Criar</button>
+            <button onclick={handleClear}>Limpar</button>
+        </div>
     </div>
-</lightning-card>
+</div>
 </template>
