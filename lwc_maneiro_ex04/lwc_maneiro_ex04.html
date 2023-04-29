@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Criar um novo Lead">
+        <div class="slds-m-around_small">            
+        
+        <lightning-input label="Sobrenome" type="text" name="lastName" value={lastName} onchange={handleInputChange}></lightning-input>
+        <lightning-input label="Empresa" type="text" name="company" value={company} onchange={handleInputChange}></lightning-input>
+        <lightning-input label="Receita Anual" type="text" name="annualRevenue" value={annualRevenue} onchange={handleInputChange}></lightning-input>   
+        <lightning-input label="Classificação" type="text" name="rating" value={rating} onchange={handleInputChange}></lightning-input>          
+        <lightning-input label="Telefone" type="text" name="phone" value={phone} onchange={handleInputChange}></lightning-input>
+        <lightning-input label="Celular" type="text" name="mobilePhone" value={mobilePhone} onchange={handleInputChange}></lightning-input><br/>
+
+        <lightning-button variant="brand" label="Criar" title="Criar" onclick={handleSubmit} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button label="Limpar" title="Limpar" onclick={handleClear} class="slds-m-left_x-small"></lightning-button>
+        
+    </div>
+</lightning-card>
+</template>
